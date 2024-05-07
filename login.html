@@ -8,17 +8,53 @@
     <link rel="stylesheet" href="login.css">
 </head>
 <body>
-<div class="login">
-    <h1 id="baslik">Giriş</h1>
-    <div class="input-group">
-        <label for="email" class="label1">E-Mail</label>
-        <input type="email" name="email" id="email">
+<nav class = "nav">
+    <ul>
+        <li><a href="index.html">Hakkımda</a></li>
+        <li> <a href="ozgecmis.html">Özgeçmiş</a> </li>
+        <li><a href="sehrim.html">Şehrim</a></li>
+        <li><a href="takim.html">Takımımız</a></li>
+        <li><a href="ilgi.html">İlgi Alanlarım</a></li>
+        <li><a href="iletisim.html">İletişim</a></li>
+        <li class ="giris"><a href="login.html">Giriş Yap</a></li>
+    </ul>
+</nav>
+<form action="form.php" id="form" method="post">
+    <div class="login">
+        <h1 id="baslik">Giriş</h1>
+        <div class="input-group">
+            <label for="email" class="label1">E-Mail</label>
+            <input type="email" name="email" id="email">
+        </div>
+        <div class="input-group">
+            <label for="password" class="label1">Şifre</label>
+            <input type="password" id="password" name="password">
+        </div>
+        <div  id="butonlar" class="input-group">
+            <input type="submit" id="gonder" name="gonder" value="Gönder" >
+            <input type="reset" id="temizle" name="temizle" value="Temizle">
+        </div>
+        <div id="error" style="display: none;">E-mail ve şifre boş bırakılamaz.</div>
     </div>
-    <div class="input-group">
-        <label for="password" class="label1">Şifre</label>
-        <input type="password" id="password">
-    </div>
-</div>
+
+</form>
+<script>
+    document.getElementById('form').addEventListener('submit', function(event) {
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+
+        if (!validateEmail(email) || !password) {
+            event.preventDefault();
+            document.getElementById('error').style.display = 'block';
+        }
+    });
+
+    function validateEmail(email) {
+        const test = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return test.test(String(email).toLowerCase());
+    }
+</script>
+
 
 </body>
 </html>

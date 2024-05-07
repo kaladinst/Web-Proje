@@ -1,6 +1,30 @@
 html {
     background-color: #153448;
 }
+.nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-right: 20px;
+}
+.nav ul li {
+    margin-right: 20px;
+
+}
+a {
+    text-decoration: none; !important;
+    color: #DFD0B8; !important;
+    animation: 1s ease-out 0s 1 slideInFromTop;
+
+}
+.nav
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3C5B6F;
+}
+
 .login {
     background-color: #153448;
     display: flex;
@@ -12,9 +36,17 @@ html {
 #baslik {
     color: #DFD0B8;
     order: 1;
+    animation: 1s ease-out 0s 1 slideInFromTop;
+
 }
 #email  {
     margin-bottom: 20px;
+    animation: 1s ease-out 0s 1 slideInFromTop;
+
+}
+#error {
+    color: whitesmoke;
+    order: 4;
 }
 .input-group {
     display: flex;
@@ -22,10 +54,47 @@ html {
     align-items: center;
     order: 2;
 }
+#butonlar
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+    animation: 1s ease-out 0s 1 slideInFromTop;
 
+}
+#butonlar button
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+#butonlar input[type="button"] {
+    width: 60px;
+    height: 20px;
+    margin: 10px;
+    animation: 1s ease-out 0s 1 slideInFromTop;
+
+}
 #password {
     order: 3;
+    animation: 1s ease-out 0s 1 slideInFromTop;
+
 }
 .label1 {
     color: #DFD0B8;
+    animation: 1s ease-out 0s 1 slideInFromTop;
+
+}
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }

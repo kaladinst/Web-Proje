@@ -8,41 +8,154 @@
         opacity: 1;
     }
 }
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+}
 .nav
 {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #3C5B6F;
+    background-color: black;
 }
 .nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
     margin-right: 20px;
+    padding-top: 20px;
 }
 .nav ul li {
     margin-right: 20px;
-
 }
+
+
 a {
     text-decoration: none; !important;
-    color: #DFD0B8; !important;
+    color: green; !important;
     animation: 1s ease-out 0s 1 slideInFromTop;
+    font-size: 20px;
+}
+#amblem {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url("A_black_image.jpg");
+    background-repeat: no-repeat;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
 
-}
-html
-{
-    background-color:#153448 ;
-}
-.div1 {
+div2    {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #3C5B6F;
+    background-color: black;
+    margin: 0;
+    padding: 0;
 }
-h1  {
-    color: #DFD0B8;
-    text-align: center;
-    animation: 1s ease-out 0s 1 slideInFromTop;
+html {
+    background-color: black;
+    background-image: url("sakaryaspor_logo.png");
+    background-repeat: no-repeat;
+    background-position: center 150px;
+
+    .div1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+    }
+
+    .dTarih {
+        display: flex;
+        flex-direction: column;
+        background-color: black;
+        color: white;
+        float: left;
+        width: 50%;
+        overflow: auto;
+        animation: 1s ease-out 0s 1 slideInFromLeft;
+        margin-top: 800px;
+        font-size: 20px;
+    }
+
+    .div2 h2 {
+        margin-bottom: 20px;
+    }
+
+    .menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        color: green;
+    }
+
+    .menu ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        margin-right: 20px;
+        padding-top: 20px;
+    }
+
+    .menu ul li {
+        margin-right: 20px;
+    }
+
+    body {
+        margin-bottom: 200vh;
+    }
+
+    .dBasari {
+        display: flex;
+        flex-direction: column;
+        background-color: black;
+        color: white;
+        float: left;
+        width: 50%;
+        overflow: auto;
+        animation: 1s ease-out 0s 1 slideInFromLeft;
+        margin-top: 600px;
+        font-size: 20px;
+        clear: left;
+    }
+
+    .dAmblem {
+        display: flex;
+        flex-direction: column;
+        background-color: black;
+        color: white;
+        float: left;
+        width: 50%;
+        overflow: auto;
+        animation: 1s ease-out 0s 1 slideInFromLeft;
+        margin-top: 600px;
+        font-size: 20px;
+        clear: left;
+    }
+    .dStad {
+        display: flex;
+        flex-direction: column;
+        background-color: black;
+        color: white;
+        float: left;
+        width: 50%;
+        overflow: auto;
+        animation: 1s ease-out 0s 1 slideInFromLeft;
+        margin-top: 600px;
+        font-size: 20px;
+        clear: left;
+    }
+
+    h1 {
+        color: green;
+        text-align: center;
+        animation: 1s ease-out 0s 1 slideInFromTop;
+    }
 }

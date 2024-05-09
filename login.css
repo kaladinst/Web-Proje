@@ -1,11 +1,12 @@
 html {
-    background-color: #153448;
+    background-color: black;
 }
 .nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
     margin-right: 20px;
+    padding-top: 20px;
 }
 .nav ul li {
     margin-right: 20px;
@@ -15,7 +16,7 @@ a {
     text-decoration: none; !important;
     color: #DFD0B8; !important;
     animation: 1s ease-out 0s 1 slideInFromTop;
-
+    font-size: 20px;
 }
 .nav
 {
@@ -23,6 +24,7 @@ a {
     justify-content: center;
     align-items: center;
     background-color: #3C5B6F;
+
 }
 
 .login {
@@ -56,28 +58,20 @@ a {
 }
 #butonlar
 {
-    display: flex;
+    display: inline-block;
     justify-content: space-around;
     align-items: center;
     margin-top: 20px;
     animation: 1s ease-out 0s 1 slideInFromTop;
-
-}
-#butonlar button
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     text-align: center;
-
+    border: none;
+    color: #DFD0B8;
 }
-#butonlar input[type="button"] {
-    width: 60px;
-    height: 20px;
-    margin: 10px;
-    animation: 1s ease-out 0s 1 slideInFromTop;
 
+#gonder {
+    margin-right: 40px;
 }
+
 #password {
     order: 3;
     animation: 1s ease-out 0s 1 slideInFromTop;

@@ -25,6 +25,10 @@
 .nav ul li {
     margin-right: 20px;
 
+
+}
+* {
+    font-family: "Oswald", sans-serif;
 }
 a {
     text-decoration: none; !important;

@@ -23,6 +23,9 @@ a {
     font-size: 20px;
 
 }
+* {
+    font-family: "Oswald", sans-serif;
+}
 html
 {
     background-color:#153448 ;

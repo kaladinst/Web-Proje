@@ -71,7 +71,9 @@ a {
 #gonder {
     margin-right: 40px;
 }
-
+* {
+    font-family: "Oswald", sans-serif;
+}
 #password {
     order: 3;
     animation: 1s ease-out 0s 1 slideInFromTop;

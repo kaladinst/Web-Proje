@@ -14,12 +14,20 @@
         opacity: 0;
     }
 }
+* {
+    font-family: "Oswald", sans-serif;
+}
 .nav
 {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: black;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+
 }
 .nav ul {
     list-style: none;
@@ -38,16 +46,7 @@ a {
     color: green; !important;
     animation: 1s ease-out 0s 1 slideInFromTop;
     font-size: 20px;
-}
-#amblem {
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    background-image: url("A_black_image.jpg");
-    background-repeat: no-repeat;
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
+
 }
 
 div2    {
@@ -57,12 +56,14 @@ div2    {
     background-color: black;
     margin: 0;
     padding: 0;
+
 }
 html {
     background-color: black;
     background-image: url("sakaryaspor_logo.png");
     background-repeat: no-repeat;
     background-position: center 150px;
+    scroll-behavior: smooth;
 
     .div1 {
         display: flex;
@@ -71,7 +72,22 @@ html {
         background-color: black;
     }
 
-    .dTarih {
+
+    #dTarih {
+        display: flex;
+        flex-direction: column;
+        background-color: black;
+        color:white;
+        float: left;
+        width: 50%;
+        overflow: auto;
+        animation: 1s ease-out 0s 1 slideInFromLeft;
+        margin-top: 800px;
+        font-size: 20px;
+
+    }
+
+    #dTaraftar {
         display: flex;
         flex-direction: column;
         background-color: black;
@@ -80,8 +96,9 @@ html {
         width: 50%;
         overflow: auto;
         animation: 1s ease-out 0s 1 slideInFromLeft;
-        margin-top: 800px;
+        margin-top: 600px;
         font-size: 20px;
+        clear: left;
     }
 
     .div2 h2 {
@@ -111,8 +128,12 @@ html {
     body {
         margin-bottom: 200vh;
     }
+    #kadro {
+        float: right;
+        clear: both;
+    }
 
-    .dBasari {
+    #dBasari {
         display: flex;
         flex-direction: column;
         background-color: black;
@@ -126,20 +147,24 @@ html {
         clear: left;
     }
 
-    .dAmblem {
+    #dAmblem {
         display: flex;
         flex-direction: column;
         background-color: black;
         color: white;
         float: left;
+        justify-content: space-between;
         width: 50%;
-        overflow: auto;
         animation: 1s ease-out 0s 1 slideInFromLeft;
         margin-top: 600px;
-        font-size: 20px;
         clear: left;
+        font-size: 20px;
     }
-    .dStad {
+    .logo {
+        display: flex;
+        flex-direction: row;
+    }
+    #dStad {
         display: flex;
         flex-direction: column;
         background-color: black;

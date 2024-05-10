@@ -4,7 +4,11 @@
     justify-content: center;
     align-items: center;
     background-color: #3C5B6F;
+    position:sticky;
+    top: 0;
 }
+* {
+    font-family: "Oswald", sans-serif;}
 .nav ul {
     list-style: none;
     display: flex;
@@ -14,14 +18,16 @@
 }
 .nav ul li {
     margin-right: 20px;
+}
+.container #main-item {
 
 }
-
 .giris {
     position: static;
     top: 0;
     right: 0;
 }
+
 a {
     text-decoration: none; !important;
     color: #DFD0B8; !important;

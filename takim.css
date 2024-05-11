@@ -49,6 +49,7 @@ a {
 
 }
 
+
 div2    {
     display: flex;
     justify-content: center;
@@ -58,129 +59,163 @@ div2    {
     padding: 0;
 
 }
+.div1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    position:sticky;
+    top: 0;
+
+}
+
+#dTarih {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color:white;
+    box-sizing: border-box;
+    float: left;
+    width: 50%;
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+    margin-top: 2000px;
+    font-size: 20px;
+    border: 2px solid green;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+#dTaraftar {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    float: left;
+    width: 50%;
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+    box-sizing: border-box;
+    margin-top: 600px;
+    font-size: 20px;
+    clear: left;
+    border: 2px solid green;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.div2 h2 {
+    margin-bottom: 20px;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: green;
+    position:sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-right: 20px;
+    padding-top: 20px;
+}
+
+.menu ul li {
+    margin-right: 20px;
+}
+
+body {
+    margin-bottom: 200vh;
+}
+#kadro {
+    float: right;
+    clear: both;
+}
+
+#dBasari {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    float: left;
+    width: 50%;
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+    margin-top: 600px;
+    font-size: 20px;
+    clear: left;
+    border: 2px solid green;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-sizing: border-box;
+}
+
+#dAmblem {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    float: left;
+    justify-content: space-between;
+    width: 50%;
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+    margin-top: 600px;
+    clear: left;
+    font-size: 20px;
+    border: 2px solid green;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-sizing: border-box;
+}
+.logo {
+    display: flex;
+    flex-direction: row;
+}
+.sticky {
+    position:sticky;
+    top: 0;
+    z-index:100000;
+}
+#dStad {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    float: left;
+    width: 50%;
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+    margin-top: 600px;
+    font-size: 20px;
+    clear: left;
+    border: 2px solid green;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-sizing: border-box;
+}
+h1 {
+    color: green;
+    text-align: center;
+    animation: 1s ease-out 0s 1 slideInFromTop;
+}
 html {
     background-color: black;
-    background-image: url("sakaryaspor_logo.png");
     background-repeat: no-repeat;
+    background-image: url("sakaryaspor_logo.png");
     background-position: center 150px;
+
     scroll-behavior: smooth;
-
-    .div1 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: black;
-    }
-
-
-    #dTarih {
-        display: flex;
-        flex-direction: column;
-        background-color: black;
-        color:white;
-        float: left;
-        width: 50%;
-        overflow: auto;
-        animation: 1s ease-out 0s 1 slideInFromLeft;
-        margin-top: 800px;
-        font-size: 20px;
-
-    }
-
-    #dTaraftar {
-        display: flex;
-        flex-direction: column;
-        background-color: black;
-        color: white;
-        float: left;
-        width: 50%;
-        overflow: auto;
-        animation: 1s ease-out 0s 1 slideInFromLeft;
-        margin-top: 600px;
-        font-size: 20px;
-        clear: left;
-    }
-
-    .div2 h2 {
-        margin-bottom: 20px;
-    }
-
-    .menu {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: black;
-        color: green;
-    }
-
-    .menu ul {
-        list-style: none;
-        display: flex;
-        justify-content: center;
-        margin-right: 20px;
-        padding-top: 20px;
-    }
-
-    .menu ul li {
-        margin-right: 20px;
-    }
-
-    body {
-        margin-bottom: 200vh;
-    }
-    #kadro {
-        float: right;
-        clear: both;
-    }
-
-    #dBasari {
-        display: flex;
-        flex-direction: column;
-        background-color: black;
-        color: white;
-        float: left;
-        width: 50%;
-        overflow: auto;
-        animation: 1s ease-out 0s 1 slideInFromLeft;
-        margin-top: 600px;
-        font-size: 20px;
-        clear: left;
-    }
-
-    #dAmblem {
-        display: flex;
-        flex-direction: column;
-        background-color: black;
-        color: white;
-        float: left;
-        justify-content: space-between;
-        width: 50%;
-        animation: 1s ease-out 0s 1 slideInFromLeft;
-        margin-top: 600px;
-        clear: left;
-        font-size: 20px;
-    }
-    .logo {
-        display: flex;
-        flex-direction: row;
-    }
-    #dStad {
-        display: flex;
-        flex-direction: column;
-        background-color: black;
-        color: white;
-        float: left;
-        width: 50%;
-        overflow: auto;
-        animation: 1s ease-out 0s 1 slideInFromLeft;
-        margin-top: 600px;
-        font-size: 20px;
-        clear: left;
-    }
-
-    h1 {
-        color: green;
-        text-align: center;
-        animation: 1s ease-out 0s 1 slideInFromTop;
-    }
 }

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Mirasımız</title>
+    <title>Takımımız</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <script src="js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -44,6 +44,7 @@
 
 
 <main id="container">
+
     <div id="dTarih">
         <h2>Tarihçe</h2>
         <p>Şehrin 1900'lü yılların başında başlayıp, zaman içinde olgunlaşan köklü futbol geçmişinin, bir potada harmanlandığı,
@@ -117,6 +118,21 @@
         <img src="basari.jpeg" alt="basarilar">
     </div>
 </main>
+<script>
+    window.onload = function() {
+        window.scrollTo(0,0);
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    }
+</script>
 
 </body>
 </html>

@@ -1,0 +1,7 @@
+Bu proje Web Teknojileri dersine ait bir projedir.
+Projede her sayfanın kendine ait bir html ve bir css elemanlarını içeren dosyaları mevcuttur.
+Sayfalardaki javascript yazımları ise html dosyalarında gerçekleştirilmiştir.
+Sayfalarda kullanılan bootstrap kodları için css ve js adında iki dosya mevcuttur.
+Resimler ve benzeri kaynaklar source dosyası altında toplanmıştır.
+Index adlı html dosyası sayfanın giriş html sayfasıdır.
+form.php ve form.css dosyaları login sayfasında gönderilen form elemanları içindir.

@@ -47,7 +47,6 @@ a {
     font-size: 20px;
     overflow: hidden;
 }
-
 a:hover {
   color:#948979;
 }
@@ -65,7 +64,6 @@ h1  {
     color: #DFD0B8;
     text-align: center;
     animation: 1s ease-out 0s 1 slideInFromTop;
-
 }
 
 .carousel {

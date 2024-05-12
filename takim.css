@@ -214,7 +214,7 @@ h1 {
 html {
     background-color: black;
     background-repeat: no-repeat;
-    background-image: url("sakaryaspor_logo.png");
+    background-image: url("source/sakaryaspor_logo.png");
     background-position: center 150px;
 
     scroll-behavior: smooth;

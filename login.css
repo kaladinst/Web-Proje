@@ -12,11 +12,20 @@ html {
     margin-right: 20px;
 
 }
+.top {
+    padding: 20px;
+    background-color: #3C5B6F;
+    color: #DFD0B8;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 a {
     text-decoration: none; !important;
     color: #DFD0B8; !important;
     animation: 1s ease-out 0s 1 slideInFromTop;
     font-size: 20px;
+}
+a:hover {
+    color:#948979;
 }
 .nav
 {

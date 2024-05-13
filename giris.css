@@ -46,6 +46,16 @@ html
 {
     background-color: #153448;
 }
+p {
+    color: #DFD0B8;
+    animation: 1s ease-out 0s 1 slideInFromTop;
+    font-size: 20px;
+    font-family: "Oswald", sans-serif;
+    border: 2px solid ;
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+}
 h1  {
     color: #DFD0B8;
     text-align: center;

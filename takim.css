@@ -78,7 +78,6 @@ div2    {
     float: left;
     width: 50%;
     animation: 1s ease-out 0s 1 slideInFromLeft;
-    margin-top: 2000px;
     font-size: 20px;
     border: 2px solid green;
     padding: 20px;

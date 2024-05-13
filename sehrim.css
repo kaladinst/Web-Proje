@@ -12,6 +12,7 @@ body {
     margin: 0;
     padding: 0;
 }
+
 .nav
 {
     display: flex;
@@ -24,6 +25,9 @@ body {
     background-color: #3C5B6F;
     color: #DFD0B8;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    position:sticky;
+    top: 0;
+    z-index: 10000000;
 }
 
 .nav ul {
@@ -54,6 +58,21 @@ html
 {
     background-color:#153448 ;
 }
+h3  {
+    font-family: "Poetsen One", sans-serif;
+    color: #DFD0B8;
+}
+.bilgiler {
+    background-color: #153448;
+    border: 2px solid #DFD0B8;
+    margin-left: 20px;
+    margin-top: 5000px;
+    float: left;
+}
+#sehirparagraf {
+    color: #DFD0B8;
+    font-size: 20px;
+}
 .div1 {
     display: flex;
     justify-content: center;
@@ -66,8 +85,14 @@ h1  {
     animation: 1s ease-out 0s 1 slideInFromTop;
 }
 
+.carousel .carousel-inner {
+    overflow: visible !important;
+    position: static !important;
+}
 .carousel {
     background-color: #153448;
+}
+body {
 }
 .carousel-inner {
 
@@ -78,4 +103,5 @@ h1  {
 .carousel-inner img {
     border-radius: 25px;
     width: 100%;
+    height:auto;
 }

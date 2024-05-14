@@ -76,7 +76,6 @@ div2    {
     color:white;
     box-sizing: border-box;
     float: left;
-    width: 50%;
     animation: 1s ease-out 0s 1 slideInFromLeft;
     font-size: 20px;
     border: 2px solid green;
@@ -85,6 +84,9 @@ div2    {
     border-radius: 10px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
+.row {
+    margin-top: 1000px;
+}
 
 #dTaraftar {
     display: flex;
@@ -92,7 +94,6 @@ div2    {
     background-color: black;
     color: white;
     float: left;
-    width: 50%;
     animation: 1s ease-out 0s 1 slideInFromLeft;
     box-sizing: border-box;
     margin-top: 600px;
@@ -134,6 +135,10 @@ div2    {
 
 body {
     margin-bottom: 200vh;
+    background-color: black;
+    background-repeat: no-repeat;
+    background-image: url("source/sakaryaspor_logo.png");
+    background-position: center 400px;
 }
 #kadro {
     float: right;
@@ -146,7 +151,6 @@ body {
     background-color: black;
     color: white;
     float: left;
-    width: 50%;
     animation: 1s ease-out 0s 1 slideInFromLeft;
     margin-top: 600px;
     font-size: 20px;
@@ -158,6 +162,34 @@ body {
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     box-sizing: border-box;
 }
+#dBasari img {
+    width: 50%;
+
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: green;
+}
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 100px;
+}
+.collapse {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: green;
+}
+#dAmblem #dTaraftar #dBasari #dTarih #dStad {
+    width: 100%; !important;
+}
 
 #dAmblem {
     display: flex;
@@ -166,7 +198,6 @@ body {
     color: white;
     float: left;
     justify-content: space-between;
-    width: 50%;
     animation: 1s ease-out 0s 1 slideInFromLeft;
     margin-top: 600px;
     clear: left;
@@ -181,6 +212,7 @@ body {
 .logo {
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 .sticky {
     position:sticky;
@@ -193,7 +225,6 @@ body {
     background-color: black;
     color: white;
     float: left;
-    width: 50%;
     animation: 1s ease-out 0s 1 slideInFromLeft;
     margin-top: 600px;
     font-size: 20px;
@@ -211,10 +242,7 @@ h1 {
     animation: 1s ease-out 0s 1 slideInFromTop;
 }
 html {
-    background-color: black;
-    background-repeat: no-repeat;
-    background-image: url("source/sakaryaspor_logo.png");
-    background-position: center 150px;
+
 
     scroll-behavior: smooth;
 }

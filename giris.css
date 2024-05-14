@@ -126,7 +126,6 @@ h2 {
     align-items: center;
     flex-direction: column;
     width: 50%;
-    text-align: center;
     border: 2px solid #DFD0B8;
     border-radius: 20px;
     margin-left: 10px;
@@ -171,7 +170,7 @@ h2 {
     background-color: #3C5B6F;
 }
 @media (max-width: 600px) {
-    #nav {
+    .nav {
         flex-direction: column;
     }
     .nav ul {
@@ -186,6 +185,13 @@ h2 {
     }
     .div1 {
         flex-direction: column;
+    }
+    .emir, .spor, .dizi {
+        width: 100%;
+    }
+    .parent-container {
+        display: grid;
+        grid-template-rows: 1fr;
     }
 }
 @keyframes slideInFromTop {

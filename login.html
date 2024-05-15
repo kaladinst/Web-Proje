@@ -14,6 +14,7 @@
 <body>
 <div class="top">
     <nav class = "nav">
+        <button class="hamburger">&#9776;</button> <!-- Hamburger button -->
         <ul>
             <li><a href="index.html">Hakkımda</a></li>
             <li> <a href="ozgecmis.html">Özgeçmiş</a> </li>
@@ -24,7 +25,6 @@
             <li class ="giris"><a href="login.html">Giriş Yap</a></li>
         </ul>
     </nav>
-
 </div>
 <form action="form.php" id="form" method="post">
     <div class="login">
@@ -67,6 +67,14 @@
     document.getElementById('email').oninput = function(event) {
         event.target.setCustomValidity('');
     }
+    document.querySelector('.hamburger').addEventListener('click', function() {
+        var nav = document.querySelector('.nav ul');
+        if (nav.style.display === 'none') {
+            nav.style.display = 'block';
+        } else {
+            nav.style.display = 'none';
+        }
+    });
 </script>
 
 

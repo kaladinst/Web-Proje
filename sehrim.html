@@ -39,18 +39,31 @@
 <main>
     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="source/sakarya-53394.webp" class="d-block w-100" alt="...">
+            <div >
+                <div class="carousel-item active">
+                    <a href="#sehirparagraf">
+                        <img src="source/sehir.png" class="d-block w-100" alt="...">
+
+                    </a>
+                </div>
+                <a href="#karasuparagraf">
+                    <div class="carousel-item">
+                        <img src="source/karasu.jpeg" class="d-block w-100" alt="..." id="karasu">
+                    </div>
+                </a>
+                <a href="">
+                    <div class="carousel-item">
+                        <img src="source/sapanca.jpeg" alt="...">
+                    </div>
+                </a>
+                <a href="">
+                    <div class="carousel-item">
+                        <img src="source/sakarya-53394.webp" alt="...">
+                    </div>
+                </a>
             </div>
-            <div class="carousel-item">
-                <img src="source/sakaryasehri.jpg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="source/sehir.png" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src=" "  class="d-block w-100"  alt="...">
-            </div>
+
+
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -61,12 +74,18 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
-    <div class="bilgiler">
+    <div class="bilgiler1">
         <h3>
             Şehir Hakkında
         </h3>
         <p id="sehirparagraf">
-            Hızlı kalkınması ve gelişmesiyle Türkiye’nin önemli şehirlerinden birisi olan Adapazarı, doğal güzellikleri ve yöresel kültürünün zenginliğiyle
+             Nüfus: 1.098.115
+
+            Yüzölçümü: 562 km²
+
+            Rakım: 31
+
+            <br>Hızlı kalkınması ve gelişmesiyle Türkiye’nin önemli şehirlerinden birisi olan Adapazarı, doğal güzellikleri ve yöresel kültürünün zenginliğiyle
             de dikkat çekmektedir.
 
             Denizi, kumsalları, gölleri, nehirleri, yaylaları, kaplıcaları yanında Taraklı ve Geyve gibi Osmanlı dönemi yerleşim yerlerindeki geleneksel
@@ -80,11 +99,36 @@
             Sakarya ili, doğudan Düzce ili, güneydoğudan Bolu ili, güneyden Bilecik ili, batıdan Kocaeli ili
             ve kuzeyden ise Karadeniz ile çevrilidir. Sakarya ilinin 16 ilçesi bulunmaktadır. Bunlar; Adapazarı, Akyazı, Arifiye, Erenler,
             Ferizli, Geyve, Hendek, Karapürçek, Karasu, Kaynarca, Kocaali, Pamukova, Sapanca, Serdivan, Söğütlü ve Taraklı’dır.
-        </p>
+            <br>
 
+        </p>
     </div>
+    <div class="bilgiler1">
+        <h3>
+        Karasu
+        </h3>
+        <p id="karasuparagraf">
+            Karasu, Marmara Bölgesi'nde, Sakarya iline bağlı bir ilçedir. Doğusunda Kocaali ilçesi, güneyinde Hendek ilçesi,
+            güneybatısında Ferizli ilçesi, batısında Kaynarca ilçesi ve kuzeyinde de Karadeniz ile çevrilidir.[1] Marmara Bölgesi'nin Batı Karadeniz ile birleştiği yerde, Sakarya'nın kuzeyinde yer alan ilçe toprakları hafif dalgalı alçak alanlardan oluşmuştur. Karadeniz kıyısındaki düzlüklerin gerisinde hafif eğimlerle yükselen alanlar, bu alanların güneyinde de dalgalı düzlükler bulunur. Ancak birkaç yıl içerisinde kıyı bölümlerinin bir kısmına
+            dalgakıran yapılarak akıntı kısmi engellenmiştir.
+
+        </p>
+    </div>
+
 
 </main>
 
 </body>
 </html>
+<script>
+    $(document).ready(function() {
+        $('.carousel').on('slid.bs.carousel', function () {
+            var img = $(this).find('.carousel-item.active img');
+            img.hover(function() {
+                $(this).css('transform', 'scale(1.1)');
+            }, function() {
+                $(this).css('transform', '');
+            });
+        });
+    });
+</script>

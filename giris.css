@@ -100,7 +100,7 @@ h2 {
     border-radius: 10px;
     padding: 10px;
     border-color: #DFD0B8;
-    borde: 2px solid;
+    border: 2px solid #DFD0B8;
 }
 #sporlabel {
     color: #DFD0B8;
@@ -111,14 +111,43 @@ h2 {
     color: #DFD0B8;
     font-family: "Poetsen One", sans-serif;
     animation: 1s ease-out 0s 1 slideInFromTop;
-
 }
+
 .parent-container {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.diziresim a {
+    display: inline-block;
+    width:50%;
+}
+.sporresim a {
+    display: inline-block;
+    width:50%;
+}
+.sporresim a img {
+    width: 100%;
+    height: 100%;
 
 }
+.diziresim a img, .sporresim a img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.diziresim a img:hover, .sporresim a img:hover {
+    transform: scale(1.1);
+}
+
+.diziresim a img {
+    width: 100%;
+    height: 100%;
+}
+
 .spor .dizi {
-    width: 50%;
+
 }
 .dizi {
     display: flex;

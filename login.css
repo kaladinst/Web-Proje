@@ -102,4 +102,49 @@ a:hover {
         transform: translateY(0);
         opacity: 1;
     }
+}@media (max-width: 1200px) {
+    .nav ul {
+        flex-direction: column;
+        padding-top: 10px;
+    }
+    .nav ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    .login {
+        height: auto;
+        padding: 20px;
+    }
+    #butonlar {
+        flex-direction: column;
+    }
+    #gonder {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
 }
+
+@media (max-width: 768px) {
+    .nav ul {
+        flex-direction: column;
+        padding-top: 5px;
+    }
+    .nav ul li {
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+    .login {
+        padding: 10px;
+    }
+    #butonlar {
+        flex-direction: column;
+    }
+    #gonder {
+        margin-bottom: 10px;
+    }
+}
+html, body {
+    min-height: 100vh;
+    background-color: #153448; 
+}
+

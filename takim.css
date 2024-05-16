@@ -29,6 +29,7 @@
     width: 100%;
     z-index: 1;
 
+
 }
 .nav ul {
     list-style: none;
@@ -39,15 +40,22 @@
 }
 .nav ul li {
     margin-right: 20px;
+    padding: 10px;
+}
+a {
+    color: green;
+    text-decoration: none;
+    animation: 1s ease-out 0s 1 slideInFromTop;
+    font-size: 22px;
+    transition: color 0.3s ease;
+}
+a:visited {
+    color: green;
 }
 
-
-a {
-    text-decoration: none; !important;
-    color: green; !important;
-    animation: 1s ease-out 0s 1 slideInFromTop;
-    font-size: 20px;
-
+a:hover {
+    color: palegreen !important;
+    text-decoration: underline !important;
 }
 .hamburger {
     display: none;

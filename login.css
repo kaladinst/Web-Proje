@@ -8,24 +8,31 @@ html {
     margin-right: 20px;
     padding-top: 20px;
 }
-.nav ul li {
-    margin-right: 20px;
 
-}
 .top {
     padding: 20px;
     background-color: #3C5B6F;
     color: #DFD0B8;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-a {
-    text-decoration: none; !important;
-    color: #DFD0B8; !important;
-    animation: 1s ease-out 0s 1 slideInFromTop;
-    font-size: 20px;
+.nav ul li {
+    margin-right: 20px;
+    padding: 10px;
 }
+a {
+    color: #DFD0B8;
+    text-decoration: none;
+    animation: 1s ease-out 0s 1 slideInFromTop;
+    font-size: 22px;
+    transition: color 0.3s ease;
+}
+a:visited {
+    color: #DFD0B8;
+}
+
 a:hover {
-    color:#948979;
+    color: #948979 !important;
+    text-decoration: underline !important;
 }
 .nav
 {
@@ -93,6 +100,20 @@ a:hover {
     animation: 1s ease-out 0s 1 slideInFromTop;
 
 }
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+}
+.hamburger div {
+    width: 2rem;
+    height: 0.25rem;
+    background: #DFD0B8;
+}
+
 @keyframes slideInFromTop {
     0% {
         transform: translateY(-100%);
@@ -102,7 +123,8 @@ a:hover {
         transform: translateY(0);
         opacity: 1;
     }
-}@media (max-width: 1200px) {
+}
+@media (max-width: 1200px) {
     .nav ul {
         flex-direction: column;
         padding-top: 10px;
@@ -123,7 +145,11 @@ a:hover {
         margin-bottom: 20px;
     }
 }
-
+@media (min-width: 769px) {
+    .nav ul {
+        transform: translateX(0);
+    }
+}
 @media (max-width: 768px) {
     .nav ul {
         flex-direction: column;
@@ -141,6 +167,9 @@ a:hover {
     }
     #gonder {
         margin-bottom: 10px;
+    }
+    .hamburger {
+        display: flex;
     }
 }
 html, body {

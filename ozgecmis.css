@@ -30,22 +30,28 @@
 }
 .nav ul li {
     margin-right: 20px;
+    padding: 10px;
+}
+a {
+    color: #DFD0B8;
+    text-decoration: none;
+    animation: 1s ease-out 0s 1 slideInFromTop;
+    font-size: 22px;
+    transition: color 0.3s ease;
+}
+a:visited {
+    color: #DFD0B8;
+}
 
-
+a:hover {
+    color: #948979 !important;
+    text-decoration: underline !important;
 }
 * {
     font-family: "Oswald", sans-serif;
 }
-a {
-    text-decoration: none; !important;
-    color: #DFD0B8; !important;
-    animation: 1s ease-out 0s 1 slideInFromTop;
-    font-size: 20px;
 
-}
-a:hover {
-    color:#948979;
-}
+
 html
 {
     background-color:#153448 ;

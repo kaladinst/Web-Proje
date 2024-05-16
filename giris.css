@@ -1,14 +1,37 @@
-.nav
-{
+.nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #3C5B6F;
-    position:sticky;
-    top: 0;
+    background-color: #313131;
+    border-radius: 20px;
+}
+.top {
+    padding: 20px;
+    background-color: #151515;
+    color: #EEEEEE;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+a:visited {
+    color: #EEEEEE;
+}
+a {
+    color: #EEEEEE;
+    text-decoration: none;
+    animation: 1s ease-out 0s 1 slideInFromTop;
+    font-size: 22px;
+    transition: color 0.3s ease;
+}
+a:hover {
+    color: #A91D3A !important;
+    text-decoration: underline !important;
+}
+html
+{
+    background-color: #151515;
 }
 * {
     font-family: "Oswald", sans-serif;
+    background-color: #151515;
 }
 .nav ul {
     list-style: none;
@@ -17,38 +40,14 @@
     margin-right: 20px;
     padding-top: 20px;
 }
-
-.container #main-item {
-
-}
 .giris {
     position: static;
     top: 0;
     right: 0;
 }
-.top {
-    padding: 20px;
-    background-color: #3C5B6F;
-    color: #DFD0B8;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
 .nav ul li {
     margin-right: 20px;
     padding: 10px;
-}
-a {
-    color: #DFD0B8;
-    animation: 1s ease-out 0s 1 slideInFromTop;
-    font-size: 22px;
-    transition: color 0.3s ease;
-}
-a:visited {
-    color: #DFD0B8;
-}
-
-a:hover {
-    color: #948979 !important;
-    text-decoration: underline !important;
 }
 #emirfoto {
     width: 500px;
@@ -58,29 +57,23 @@ a:hover {
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
     filter: brightness(90%);
 }
-
-html
-{
-    background-color: #153448;
-}
-
 p {
-    color: #DFD0B8;
+    color: #EEEEEE;
     animation: 1s ease-out 0s 1 slideInFromTop;
     font-size: 20px;
     font-family: "Oswald", sans-serif;
 
 }
 h1  {
-    color: #DFD0B8;
+    color: #EEEEEE;
     text-align: center;
     animation: 1s ease-out 0s 1 slideInFromTop;
 }
 main {
-    background-color: #153448 !important;
+    background-color: #151515 !important;
 }
 h2 {
-    color: #DFD0B8;
+    color: #EEEEEE;
     animation: 1s ease-out 0s 1 slideInFromTop;
     font-family: "Poetsen One", sans-serif;
     padding-top: 20px;
@@ -94,11 +87,10 @@ h2 {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border: 2px solid ;
+    border: 2px solid #C73659;
     text-align: center;
     border-radius: 20px;
     padding: 10px;
-    border-color: #DFD0B8;
 }
 .emir {
     align-content: center;
@@ -108,16 +100,15 @@ h2 {
     width: 50%;
     border-radius: 10px;
     padding: 10px;
-    border-color: #DFD0B8;
-    border: 2px solid #DFD0B8;
+    border: 2px solid #C73659;
 }
 #sporlabel {
-    color: #DFD0B8;
+    color: #EEEEEE;
     font-family: "Poetsen One", sans-serif;
     animation: 1s ease-out 0s 1 slideInFromTop;
 }
 #dizilabel {
-    color: #DFD0B8;
+    color: #EEEEEE;
     font-family: "Poetsen One", sans-serif;
     animation: 1s ease-out 0s 1 slideInFromTop;
 }
@@ -155,8 +146,8 @@ h2 {
     height: 100%;
 }
 
-.spor .dizi {
-
+body {
+    background-color: #151515;
 }
 .dizi {
     display: flex;
@@ -164,9 +155,10 @@ h2 {
     align-items: center;
     flex-direction: column;
     width: 50%;
-    border: 2px solid #DFD0B8;
+    border: 2px solid #C73659;
     border-radius: 20px;
     margin-left: 10px;
+    margin-top: 20px;
 }
 .sporresim {
     object-fit: cover;
@@ -205,7 +197,7 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #3C5B6F;
+    background-color: #151515;
 }
 @media (max-width: 600px) {
     .nav {

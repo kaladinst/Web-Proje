@@ -1,6 +1,4 @@
-html {
-    background-color: black;
-}
+
 .nav ul {
     list-style: none;
     display: flex;
@@ -11,8 +9,8 @@ html {
 
 .top {
     padding: 20px;
-    background-color: #3C5B6F;
-    color: #DFD0B8;
+    background-color: #151515;
+    color: #EEEEEE;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .nav ul li {
@@ -20,18 +18,17 @@ html {
     padding: 10px;
 }
 a {
-    color: #DFD0B8;
+    color: #EEEEEE;
     text-decoration: none;
     animation: 1s ease-out 0s 1 slideInFromTop;
     font-size: 22px;
     transition: color 0.3s ease;
 }
 a:visited {
-    color: #DFD0B8;
+    color: #EEEEEE;
 }
-
 a:hover {
-    color: #948979 !important;
+    color: #A91D3A !important;
     text-decoration: underline !important;
 }
 .nav
@@ -39,28 +36,25 @@ a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #3C5B6F;
-
+    background-color: #313131;
+    border-radius: 20px;
 }
-
 .login {
-    background-color: #153448;
+    background-color: #151515;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 50vh;
 }
 #baslik {
-    color: #DFD0B8;
+    color: #EEEEEE;
     order: 1;
     animation: 1s ease-out 0s 1 slideInFromTop;
-
 }
 #email  {
     margin-bottom: 20px;
     animation: 1s ease-out 0s 1 slideInFromTop;
-
 }
 #error {
     color: whitesmoke;
@@ -81,12 +75,29 @@ a:hover {
     animation: 1s ease-out 0s 1 slideInFromTop;
     text-align: center;
     border: none;
-    color: #DFD0B8;
 }
 
 #gonder {
     margin-right: 40px;
+    background-color: #EEEEEE;
+    border-radius: 15px;
+    transition: color 0.3s ease;
 }
+#temizle {
+    background-color: #EEEEEE;
+    border-radius: 15px;
+    transition: color 0.3s ease;
+}
+#gonder:hover {
+    background-color: #A91D3A;
+    transform: scale(1.05);
+}
+#temizle:hover {
+    background-color: #A91D3A;
+    transform: scale(1.05);
+
+}
+
 * {
     font-family: "Oswald", sans-serif;
 }
@@ -95,10 +106,10 @@ a:hover {
     animation: 1s ease-out 0s 1 slideInFromTop;
 
 }
-.label1 {
-    color: #DFD0B8;
-    animation: 1s ease-out 0s 1 slideInFromTop;
 
+.label1 {
+    color: #EEEEEE;
+    animation: 1s ease-out 0s 1 slideInFromTop;
 }
 .hamburger {
     display: none;
@@ -111,7 +122,6 @@ a:hover {
 .hamburger div {
     width: 2rem;
     height: 0.25rem;
-    background: #DFD0B8;
 }
 
 @keyframes slideInFromTop {
@@ -174,6 +184,6 @@ a:hover {
 }
 html, body {
     min-height: 100vh;
-    background-color: #153448;
+    background-color: #151515;
 }
 

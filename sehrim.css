@@ -18,12 +18,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #3C5B6F;
+    background-color: #313131;
+    border-radius: 20px;
 }
 .top {
     padding: 20px;
-    background-color: #3C5B6F;
-    color: #DFD0B8;
+    background-color: #151515;
+    color: #EEEEEE;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     position:sticky;
     top: 0;
@@ -39,43 +40,43 @@ body {
 }
 .nav ul li {
     margin-right: 20px;
-
+    padding: 10px;
 }
 * {
     font-family: "Oswald", sans-serif;
 }
 a {
+    color: #EEEEEE;
     text-decoration: none;
-    color: #DFD0B8;
     animation: 1s ease-out 0s 1 slideInFromTop;
-    font-size: 20px;
-    overflow: hidden;
+    font-size: 22px;
+    transition: color 0.3s ease;
 }
 a:hover {
-  color:#948979;
+  color:#A91D3A;
 }
 html
 {
-    background-color:#153448 ;
+    background-color:#151515 ;
 }
 h3  {
     font-family: "Poetsen One", sans-serif;
-    color: #DFD0B8;
+    color: #EEEEEE;
 }
 .bilgiler1 {
-    background-color: #153448;
-    border: 2px solid #DFD0B8;
+    background-color: #151515;
+    border: 2px solid #EEEEEE;
     margin-top: 200px;
     float: left;
 }
 bilgiler2 {
-    background-color: #153448;
-    border: 2px solid #DFD0B8;
+    background-color: #151515;
+    border: 2px solid #EEEEEE;
     margin-top: 200px;
     float: left;
 }
 #karasuparagraf {
-    color: #DFD0B8;
+    color: #EEEEEE;
     font-size:30px;
 }
 #karasu {
@@ -83,22 +84,22 @@ bilgiler2 {
     height:70%;
 }
 #sehirparagraf {
-    color: #DFD0B8;
+    color: #EEEEEE;
     font-size: 30px;
 }
 .div1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #3C5B6F;
+    background-color: #151515;
 }
 h1  {
-    color: #DFD0B8;
+    color: #EEEEEE;
     text-align: center;
     animation: 1s ease-out 0s 1 slideInFromTop;
 }
 .carousel {
-    background-color:#153448;
+    background-color:#151515;
 }
 
 .carousel-inner {

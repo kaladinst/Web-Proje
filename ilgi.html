@@ -28,9 +28,54 @@
     <div class="div1">
         <h1>İlgi Alanlarım</h1>
     </div>
-    <div></div>
+
 </div>
+<div id="film"></div>
+<script>
+    const API_KEY = '105754d85f4eaba480e8e0f2bda27ca3';
+    const LIST_ID = "8300560";
+    const IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/w500';
+
+    let currentPage = 1;
+    let totalPages = 1;
+
+    function fetchMovies(page) {
+        fetch(`https://api.themoviedb.org/3/list/${LIST_ID}?api_key=${API_KEY}&page=${page}`)
+            .then(response => response.json())
+            .then(data => {
+                const movieList = document.getElementById('film');
+                const movies = data.items;
+                totalPages = data.total_pages;
+
+                // Iterate over all movies
+                for (let i = 0; i < movies.length; i++) {
+                    const movie = movies[i];
+
+                    const p = document.createElement('p');
+                    p.textContent = ` ${movie.title}`;
+                    movieList.appendChild(p);
+
+                    if (movie.poster_path) {
+                        const img = document.createElement('img');
+                        img.src = IMAGE_BASE_URL + movie.poster_path;
+                        img.alt = `Poster of ${movie.title}`;
+                        movieList.appendChild(img);
+                    }
+                }
+
+                // If there are more pages, fetch the next one
+                if (currentPage < totalPages) {
+                    fetchMovies(currentPage + 1);
+                }
+            })
+            .catch(error => console.error('Error:', error));
+    }
+
+    // Start fetching movies
+    fetchMovies(currentPage);
+</script>
 
 
 </body>
 </html>
+

@@ -1,4 +1,4 @@
-var app = angular.module('contactApp', []);
+let app = angular.module('contactApp', []);
 
 app.controller('FormController', ['$scope', function($scope) {
     // Initialize user object
@@ -23,6 +23,7 @@ app.controller('FormController', ['$scope', function($scope) {
             $scope.formStatus.submitted = true;
         }
     };
+
     $scope.isEmpty = function(field) {
         return angular.isUndefined(field) || field === '';
     };

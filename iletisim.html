@@ -36,41 +36,42 @@
 
     </div>
     <div class="form">
-        <form action="iletisim.php" method="post" name="contactForm" ng-submit="submitForm()" novalidate>
+        <form action="iletisim.php" method="post" name="contactForm" ng-submit="submitForm(); formStatus.submitted = true" novalidate>
             <label for="ad">Ad:</label>
             <input type="text" id="ad" name="ad" ng-model="user.name" required>
-            <p ng-show="contactForm.ad.$error.required && formStatus.submitted" class="error">Name is required.</p>
+            <p ng-show="(contactForm.ad.$touched || formStatus.submitted) && contactForm.ad.$invalid" class="error">Name is required.</p>
 
             <label for="soyad">Soyad</label>
             <input type="text" id="soyad" name="soyad" ng-model="user.surname" required>
-            <p ng-show="contactForm.soyad.$error.required && formStatus.submitted" class="error">Surname is required.</p>
-
+            <p ng-show="(contactForm.soyad.$touched || formStatus.submitted) && contactForm.soyad.$invalid" class="error">Surname is required.</p>
 
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" ng-model="user.email" required>
-            <p ng-show="(contactForm.email.$touched && contactForm.email.$invalid) || (contactForm.email.$invalid && submitted)" class="error">Enter a valid email.</p>
+            <p ng-show="(contactForm.email.$touched || formStatus.submitted) && contactForm.email.$invalid" class="error">Enter a valid email.</p>
 
             <div class="cinsiyet">
                 <label for="erkek">Erkek:</label>
-                <input type="radio" id="erkek" name="cinsiyet" value="erkek" ng-model="user.gender">
+                <input type="radio" id="erkek" name="cinsiyet" value="erkek" ng-model="user.gender" required>
 
                 <div class="kadın"></div>
                 <label for="kadın">Kadin:</label>
-                <input type="radio" id="kadın" name="cinsiyet" value="Kadın" ng-model="user.gender">
+                <input type="radio" id="kadın" name="cinsiyet" value="Kadın" ng-model="user.gender" required>
             </div>
-            <p ng-show="contactForm.cinsiyet.$error.required && formStatus.submitted" class="error">Gender is required.</p>
+            <p ng-show="(contactForm.cinsiyet.$touched || formStatus.submitted) && contactForm.cinsiyet.$invalid" class="error">Gender is required.</p>
 
             <label for="country">Country:</label>
             <select id="country" name="country" ng-model="user.country" required>
-                <p ng-show="(contactForm.country.$touched && contactForm.country.$invalid) || (contactForm.country.$invalid && submitted)" class="error">Country is required.</p>
                 <option value="">Ülke Seçin</option>
-                <option value="US">United States</option>
-                <option value="UK">United Kingdom</option>
+                <option value="US">ABD</option>
+                <option value="TR">Türkiye</option>
+                <option value="GER">Almanya</option>
+                <option value="FRA">Fransa</option>
             </select>
-            <p ng-show="contactForm.message.$error.required && formStatus.submitted" class="error">Message is required.</p>
+            <p ng-show="(contactForm.country.$touched || formStatus.submitted) && contactForm.country.$invalid" class="error">Country is required.</p>
+
             <label for="message">Mesaj</label>
             <textarea id="message" name="message" ng-model="user.message" required></textarea>
-            <p ng-show="contactForm.message.$touched && contactForm.message.$invalid || (submitted && contactForm.message.$invalid)" class="error">Message is required.</p>                <div class="butonlar">
+            <p ng-show="(contactForm.message.$touched || formStatus.submitted) && contactForm.message.$invalid" class="error">Message is required.</p>             <div class="butonlar">
                     <button type="submit" ng-disabled="contactForm.$invalid">Submit</button>
                     <button type="button" ng-click="resetForm()">Clear</button>
                 </div>
@@ -117,6 +118,32 @@
             var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
             if (!emailRegex.test(email.value)) {
                 alert('Lütfen geçerli bir email adresi giriniz.');
+            }
+        });
+    });
+    document.addEventListener('DOMContentLoaded', function() {
+        var validateButton = document.querySelector('#validateButton');
+        var form = document.querySelector('form');
+        validateButton.addEventListener('click', function(event) {
+            var name = document.querySelector('input[name="ad"]');
+            var surname = document.querySelector('input[name="soyad"]');
+            var email = document.querySelector('input[name="email"]');
+            var gender = document.querySelector('input[name="cinsiyet"]:checked');
+            var country = document.querySelector('select[name="country"]');
+            var message = document.querySelector('textarea[name="message"]');
+
+            // Check if any field is empty
+            if (!name.value || !surname.value || !email.value || !gender || !country.value || !message.value) {
+                alert('Lütfen tüm alanları doldurunuz.');
+            } else {
+                // Check if email is valid
+                var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+                if (!emailRegex.test(email.value)) {
+                    alert('Lütfen geçerli bir email adresi giriniz.');
+                } else {
+                    // If all validations pass, submit the form
+                    form.submit();
+                }
             }
         });
     });

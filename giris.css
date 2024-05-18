@@ -29,14 +29,7 @@ a:hover {
 ul {
     list-style: none; /* This removes the default bullet points */
 }
-footer {
-    background-color: #151515;
-    color: #EEEEEE;
-    text-align: center;
-    padding: 20px;
-    margin-top: 20px;
 
-}
 
 ul li::before {
     content: "\f058";
@@ -45,9 +38,17 @@ ul li::before {
     margin-right: 10px;
     color: #A91D3A;
 }
+footer {
+    background-color: #151515;
+    color: #EEEEEE;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+
+}
 * {
     font-family: "Oswald", sans-serif;
-    background-color: #151515;
+
 }
 .nav ul {
     list-style: none;

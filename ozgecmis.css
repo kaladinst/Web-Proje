@@ -87,7 +87,6 @@ footer {
     margin-top: 20px;
 
 }
-
 ul li::before {
     content: "\f058";
     font-weight: 900;

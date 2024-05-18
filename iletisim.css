@@ -80,6 +80,15 @@ main footer {
     border-radius: 20px;
     color: #EEEEEE;
 }
+#validateButton {
+    background-color: #151515;
+    color: #EEEEEE;
+    border-radius: 20px;
+}
+#validateButton:hover {
+    background-color: #A91D3A;
+
+}
 
 html
 {
@@ -111,27 +120,26 @@ footer {
     background-color: #151515;
     color: white;
 
+
 }
 button {
-    background-color: #151515; /* Green background */
-    border: none; /* Remove border */
-    color: white; /* White text */
-    padding: 15px 32px; /* Padding */
-    text-align: center; /* Center text */
-    text-decoration: none; /* Remove underline */
+    background-color: #151515;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row !important;
     font-size: 16px;
     margin: 4px 2px;
-    cursor: pointer; /* Change cursor to pointer when hovering over the button */
-    transition-duration: 0.4s; /* Transition effect */
+    cursor: pointer;
+    transition-duration: 0.4s;
 }
-
-/* Style for button when mouse is over it */
 button:hover {
-    background-color: #A91D3A; /* Change background color */
+    background-color: #A91D3A;
 }
 h1  {
     color: #EEEEEE;

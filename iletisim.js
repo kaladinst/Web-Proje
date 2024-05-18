@@ -11,15 +11,20 @@ app.controller('FormController', ['$scope', function($scope) {
         message: ''
     };
 
-    $scope.submitted = false;
+    $scope.formStatus = {
+        submitted: false
+    };
 
-    // Function to handle form submission
     $scope.submitForm = function() {
         if ($scope.contactForm.$valid) {
-            // If the form is valid, you can send the data to the server here
             console.log($scope.user);
-            $scope.submitted = true; // Only set submitted to true when the form is valid
+            $scope.formStatus.submitted = true;
+        } else {
+            $scope.formStatus.submitted = true;
         }
+    };
+    $scope.isEmpty = function(field) {
+        return angular.isUndefined(field) || field === '';
     };
 
     // Function to reset the form
@@ -33,6 +38,6 @@ app.controller('FormController', ['$scope', function($scope) {
             message: ''
         };
         $scope.contactForm.$setPristine();
-        $scope.submitted = false;
+        $scope.formStatus.submitted = false;
     };
 }]);

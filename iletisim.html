@@ -36,13 +36,14 @@
 
     </div>
     <div class="form">
-        <form name="contactForm" ng-submit="submitForm()" novalidate>
+        <form action="iletisim.php" method="post" name="contactForm" ng-submit="submitForm()" novalidate>
             <label for="ad">Ad:</label>
             <input type="text" id="ad" name="ad" ng-model="user.name" required>
+            <p ng-show="contactForm.ad.$error.required && formStatus.submitted" class="error">Name is required.</p>
 
-            <p ng-show="contactForm.name.$touched && contactForm.name.$invalid || (submitted && contactForm.name.$invalid)" class="error">Name is required.</p>
             <label for="soyad">Soyad</label>
             <input type="text" id="soyad" name="soyad" ng-model="user.surname" required>
+            <p ng-show="contactForm.soyad.$error.required && formStatus.submitted" class="error">Surname is required.</p>
 
 
             <label for="email">Email:</label>
@@ -57,7 +58,7 @@
                 <label for="kadın">Kadin:</label>
                 <input type="radio" id="kadın" name="cinsiyet" value="Kadın" ng-model="user.gender">
             </div>
-
+            <p ng-show="contactForm.cinsiyet.$error.required && formStatus.submitted" class="error">Gender is required.</p>
 
             <label for="country">Country:</label>
             <select id="country" name="country" ng-model="user.country" required>
@@ -66,20 +67,23 @@
                 <option value="US">United States</option>
                 <option value="UK">United Kingdom</option>
             </select>
-            <p ng-show="contactForm.country.$invalid && !contactForm.country.$pristine" class="error">Country is required.</p>
-
+            <p ng-show="contactForm.message.$error.required && formStatus.submitted" class="error">Message is required.</p>
             <label for="message">Mesaj</label>
             <textarea id="message" name="message" ng-model="user.message" required></textarea>
-            <p ng-show="(contactForm.message.$touched && contactForm.message.$invalid) || (contactForm.message.$invalid && submitted)" class="error">Message is required.</p>
-                <div class="butonlar">
+            <p ng-show="contactForm.message.$touched && contactForm.message.$invalid || (submitted && contactForm.message.$invalid)" class="error">Message is required.</p>                <div class="butonlar">
                     <button type="submit" ng-disabled="contactForm.$invalid">Submit</button>
                     <button type="button" ng-click="resetForm()">Clear</button>
                 </div>
+            <button type="button" id="validateButton">Validate</button>
+
 
 
 
         </form>
+
     </div>
+
+
 </main>
 <footer>
     <p>&copy; 2024 Emir  Duman</p>
@@ -92,3 +96,28 @@
 <script src="iletisim.js"></script>
 </body>
 </html>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var validateButton = document.querySelector('#validateButton');
+        validateButton.addEventListener('click', function(event) {
+            var name = document.querySelector('input[name="ad"]');
+            var surname = document.querySelector('input[name="soyad"]');
+            var email = document.querySelector('input[name="email"]');
+            var gender = document.querySelector('input[name="cinsiyet"]:checked');
+            var country = document.querySelector('select[name="country"]');
+            var message = document.querySelector('textarea[name="message"]');
+
+            // Check if any field is empty
+            if (!name.value || !surname.value || !email.value || !gender || !country.value || !message.value) {
+                alert('Lütfen tüm alanları doldurunuz.');
+            }
+
+            // Check if email is valid
+            var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            if (!emailRegex.test(email.value)) {
+                alert('Lütfen geçerli bir email adresi giriniz.');
+            }
+        });
+    });
+</script>

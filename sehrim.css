@@ -71,11 +71,33 @@ h3  {
     border-radius: 25px;
 
 }
+ul {
+    list-style: none; /* This removes the default bullet points */
+}
 
+ul li::before {
+    content: "\f058";
+    font-weight: 900;
+    display: inline-block;
+    margin-right: 10px;
+    color: #A91D3A;
+}
 #karasuparagraf {
     color: #EEEEEE;
     font-size:30px;
 }
+footer {
+    background-color: #151515;
+    color: #EEEEEE;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+main, footer {
+    margin: 0;
+    padding: 0;
+}
+
 #sapancaparagraf {
     color: #EEEEEE;
     font-size:30px;

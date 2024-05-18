@@ -6,6 +6,7 @@
     background-color: #313131;
     border-radius: 20px;
 }
+
 .nav ul {
     list-style: none;
     display: flex;
@@ -35,6 +36,50 @@ a:hover {
 * {
     font-family: "Oswald", sans-serif;
 }
+form {
+    background-color: #151515;
+}
+input[type="text"] {
+    color: #A91D3A;
+    background-color: #313131;
+}
+input[type="email"] {
+    color: #A91D3A;
+    background-color: #313131;
+}
+.cinsiyet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+}
+.kadın {
+    margin-left: 20px;
+}
+
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #EEEEEE;
+
+}
+main footer {
+    padding: 0px;
+    margin: 0px;
+}
+#message {
+    background-color: #313131;
+    border-radius: 20px;
+}
+#country {
+    background-color: #313131;
+    border-radius: 20px;
+    color: #EEEEEE;
+}
 
 html
 {
@@ -51,6 +96,42 @@ html
     justify-content: center;
     align-items: center;
     background-color: #151515;
+}
+footer {
+    background-color: #151515;
+    color: #EEEEEE;
+    text-align: center;
+    padding: 20px;
+
+}
+.butonlar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #151515;
+    color: white;
+
+}
+button {
+    background-color: #151515; /* Green background */
+    border: none; /* Remove border */
+    color: white; /* White text */
+    padding: 15px 32px; /* Padding */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row !important;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer; /* Change cursor to pointer when hovering over the button */
+    transition-duration: 0.4s; /* Transition effect */
+}
+
+/* Style for button when mouse is over it */
+button:hover {
+    background-color: #A91D3A; /* Change background color */
 }
 h1  {
     color: #EEEEEE;

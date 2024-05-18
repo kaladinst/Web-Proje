@@ -1,47 +1,94 @@
 <!DOCTYPE html>
 <html lang="tr" ng-app="contactApp">
-<!-- ... your other head elements ... -->
-<body ng-controller="contactController">
-<!-- ... your other body elements ... -->
+<head>
+    <meta charset="UTF-8">
+    <title>İletişim</title>
+    <link rel="stylesheet" href="iletisim.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Poetsen+One&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-controller="FormController" >
 <main>
+    <div class="top">
+        <nav class = "nav">
+            <ul>
+                <li><a href="index.html">Hakkımda</a></li>
+                <li> <a href="ozgecmis.html">Özgeçmiş</a> </li>
+                <li><a href="sehrim.html">Şehrim</a></li>
+                <li><a href="takim.html">Takımımız</a></li>
+                <li><a href="ilgi.html">İlgi Alanlarım</a></li>
+                <li><a href="iletisim.html">İletişim</a></li>
+                <li class ="giris"><a href="login.html">Giriş Yap</a></li>
+            </ul>
+        </nav>
+        <div class="div1">
+            <h1>İletişim</h1>
+        </div>
+
+    </div>
     <div class="form">
         <form name="contactForm" ng-submit="submitForm()" novalidate>
             <label for="ad">Ad:</label>
             <input type="text" id="ad" name="ad" ng-model="user.name" required>
 
-            <p ng-show="contactForm.name.$invalid && !contactForm.name.$pristine" class="error">Name is required.</p>
+            <p ng-show="contactForm.name.$touched && contactForm.name.$invalid || (submitted && contactForm.name.$invalid)" class="error">Name is required.</p>
             <label for="soyad">Soyad</label>
             <input type="text" id="soyad" name="soyad" ng-model="user.surname" required>
 
 
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" ng-model="user.email" required>
-            <p ng-show="contactForm.email.$invalid && !contactForm.email.$pristine" class="error">Enter a valid email.</p>
+            <p ng-show="(contactForm.email.$touched && contactForm.email.$invalid) || (contactForm.email.$invalid && submitted)" class="error">Enter a valid email.</p>
 
-            <label for="erkek">Erkek:</label>
-            <input type="radio" id="erkek" name="erkek" value="erkek" ng-model="user.gender">
+            <div class="cinsiyet">
+                <label for="erkek">Erkek:</label>
+                <input type="radio" id="erkek" name="cinsiyet" value="erkek" ng-model="user.gender">
 
-            <label for="kadın">Kadin:</label>
-            <input type="radio" id="kadın" name="kadın" value="Kadın" ng-model="user.gender">
+                <div class="kadın"></div>
+                <label for="kadın">Kadin:</label>
+                <input type="radio" id="kadın" name="cinsiyet" value="Kadın" ng-model="user.gender">
+            </div>
+
 
             <label for="country">Country:</label>
             <select id="country" name="country" ng-model="user.country" required>
+                <p ng-show="(contactForm.country.$touched && contactForm.country.$invalid) || (contactForm.country.$invalid && submitted)" class="error">Country is required.</p>
                 <option value="">Ülke Seçin</option>
                 <option value="US">United States</option>
                 <option value="UK">United Kingdom</option>
-                <!-- Add other countries as needed -->
             </select>
             <p ng-show="contactForm.country.$invalid && !contactForm.country.$pristine" class="error">Country is required.</p>
 
-            <label for="message">Message:</label>
+            <label for="message">Mesaj</label>
             <textarea id="message" name="message" ng-model="user.message" required></textarea>
-            <p ng-show="contactForm.message.$invalid && !contactForm.message.$pristine" class="error">Message is required.</p>
+            <p ng-show="(contactForm.message.$touched && contactForm.message.$invalid) || (contactForm.message.$invalid && submitted)" class="error">Message is required.</p>
+                <div class="butonlar">
+                    <button type="submit" ng-disabled="contactForm.$invalid">Submit</button>
+                    <button type="button" ng-click="resetForm()">Clear</button>
+                </div>
 
-            <button type="submit" ng-disabled="contactForm.$invalid">Submit</button>
-            <button type="button" ng-click="resetForm()">Clear</button>
+
+
         </form>
     </div>
 </main>
+<footer>
+    <p>&copy; 2024 Emir  Duman</p>
+    <p>
+        <a href="mailto:emir.d10@outlook.com">Email</a> |
+        <a href="https://github.com/kaladinst">GitHub</a> |
+        <a href="https://www.linkedin.com/in/emir-ali-duman-7b2334246/">LinkedIn</a>
+    </p>
+</footer>
 <script src="iletisim.js"></script>
 </body>
 </html>

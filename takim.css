@@ -75,6 +75,23 @@ a:hover {
         margin-top: 20px;
     }
 }
+ul {
+    list-style: none; /* This removes the default bullet points */
+}
+footer {
+    background-color: black;
+    color: #EEEEEE;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+ul li::before {
+    content: "\f058";
+    font-weight: 900;
+    display: inline-block;
+    margin-right: 10px;
+    color: green;
+}
 @media (min-width: 769px) {
     #dAmblem, #dTaraftar, #dBasari, #dTarih, #dStad {
         flex-direction: row;

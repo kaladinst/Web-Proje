@@ -12,8 +12,9 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 a:visited {
-    color: #EEEEEE;
+    color: #EEEEEE !important;
 }
+
 a {
     color: #EEEEEE;
     text-decoration: none;
@@ -25,8 +26,29 @@ a:hover {
     color: #A91D3A !important;
     text-decoration: underline !important;
 }
+ul {
+    list-style: none; /* This removes the default bullet points */
+}
+footer {
+    background-color: #151515;
+    color: #EEEEEE;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+
+}
+
+ul li::before {
+    content: "\f058";
+    font-weight: 900;
+    display: inline-block;
+    margin-right: 10px;
+    color: #A91D3A;
+}
 * {
-    font-family: "Oswald", sans-serif;}
+    font-family: "Oswald", sans-serif;
+    background-color: #151515;
+}
 .nav ul {
     list-style: none;
     display: flex;
@@ -142,6 +164,10 @@ h2 {
 
 body {
     background-color: #151515;
+}
+main, footer {
+    margin: 0;
+    padding: 0;
 }
 .dizi {
     display: flex;

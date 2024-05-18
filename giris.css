@@ -25,14 +25,8 @@ a:hover {
     color: #A91D3A !important;
     text-decoration: underline !important;
 }
-html
-{
-    background-color: #151515;
-}
 * {
-    font-family: "Oswald", sans-serif;
-    background-color: #151515;
-}
+    font-family: "Oswald", sans-serif;}
 .nav ul {
     list-style: none;
     display: flex;

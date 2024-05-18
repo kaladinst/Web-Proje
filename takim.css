@@ -66,6 +66,24 @@ a:hover {
     .nav ul {
         display: none;
     }
+    #dAmblem, #dTaraftar, #dBasari, #dTarih, #dStad {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+}
+@media (min-width: 769px) {
+    #dAmblem, #dTaraftar, #dBasari, #dTarih, #dStad {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 80%;
+        max-width: 100%;
+        margin-left: 150px;
+        margin-top: 600px;
+    }
 }
 
 div2    {

@@ -66,23 +66,42 @@ h3  {
 .bilgiler1 {
     background-color: #151515;
     border: 2px solid #EEEEEE;
-    margin-top: 200px;
+    margin-top: 600px;
     float: left;
+    border-radius: 25px;
+
 }
-bilgiler2 {
-    background-color: #151515;
-    border: 2px solid #EEEEEE;
-    margin-top: 200px;
-    float: left;
-}
+
 #karasuparagraf {
     color: #EEEEEE;
     font-size:30px;
 }
-#karasu {
-    width: 70%;
-    height:70%;
+#sapancaparagraf {
+    color: #EEEEEE;
+    font-size:30px;
 }
+#serdivanparagraf {
+    color: #EEEEEE;
+    font-size:30px;
+}
+#serdivan {
+    text-align: center;
+    font-size:40px;
+}
+#sapanca {
+    text-align: center;
+    font-size:40px;
+}
+#karasu {
+    text-align: center;
+    font-size: 40px;
+}
+#sehir {
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+}
+
 #sehirparagraf {
     color: #EEEEEE;
     font-size: 30px;
